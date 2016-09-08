@@ -7,10 +7,12 @@ buildscript {
     }
     dependencies {
         classpath "org.apache.commons:commons-lang3:3.4"
+        classpath 'org.gradle:customPlugin2:1.1'
     }
 }
 
 apply plugin: 'idea'
+apply plugin: 'org.samples.hello'
 
 subprojects {
     apply plugin: 'java'
