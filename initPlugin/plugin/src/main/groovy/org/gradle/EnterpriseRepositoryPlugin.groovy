@@ -6,7 +6,7 @@ import org.gradle.api.artifacts.repositories.ArtifactRepository
 import org.gradle.api.artifacts.repositories.MavenArtifactRepository
 
 class EnterpriseRepositoryPlugin implements Plugin<Gradle> {
-    private static String ENTERPRISE_REPOSITORY_URL = System.env('ENTERPRISE_REPOSITORY_URL') ?: "https://repo.gradle.org/gradle/repo"
+    private static String ENTERPRISE_REPOSITORY_URL = System.getenv('ENTERPRISE_REPOSITORY_URL') ?: "https://repo.gradle.org/gradle/repo"
 
     void apply(Gradle gradle) {
         def allowedUrls = [ENTERPRISE_REPOSITORY_URL, 'https://jcenter.bintray.com/']
