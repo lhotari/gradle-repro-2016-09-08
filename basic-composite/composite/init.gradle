@@ -1,0 +1,15 @@
+import org.gradle.EnterpriseRepositoryPlugin
+
+initscript {
+    repositories {
+        jcenter()
+        maven {
+            url System.getenv('INITPLUGIN_REPOSITORY_URL')
+        }
+    }    
+    dependencies {
+        classpath 'org.gradle:initPlugin:1.0-SNAPSHOT'
+    }
+}
+
+apply plugin: EnterpriseRepositoryPlugin
