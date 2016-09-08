@@ -1,15 +1,20 @@
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url rootProject.file('../../customPlugin/repo').toURI().toURL()
+        }
     }
     dependencies {
         classpath "org.apache.commons:commons-lang3:3.3"
+        classpath 'org.gradle:customPlugin2:1.0-SNAPSHOT'
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'idea'
+apply plugin: 'org.samples.hello'
 
 group "org.sample"
 version "1.0"

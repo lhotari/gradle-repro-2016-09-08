@@ -13,3 +13,9 @@ task checkAll {
     dependsOn gradle.includedBuild('my-utils').task(':number-utils:check')
     dependsOn gradle.includedBuild('my-utils').task(':string-utils:check')
 }
+
+task helloAll {
+    dependsOn gradle.includedBuild('my-app').task(':hello')
+    dependsOn gradle.includedBuild('my-utils').task(':number-utils:hello')
+    dependsOn gradle.includedBuild('my-utils').task(':string-utils:hello')
+}

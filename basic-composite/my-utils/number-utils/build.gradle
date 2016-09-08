@@ -1,8 +1,14 @@
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url rootProject.file('../../customPlugin/repo').toURI().toURL()
+        }
     }
     dependencies {
         classpath "org.apache.commons:commons-lang3:3.4"
+        classpath 'org.gradle:customPlugin:1.0-SNAPSHOT'
     }
 }
+
+apply plugin: 'org.samples.greeting'
