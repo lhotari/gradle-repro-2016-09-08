@@ -8,7 +8,9 @@ initscript {
         }
     }    
     dependencies {
-        classpath 'org.gradle:initPlugin:1.0-SNAPSHOT'
+        def initPluginVersion = System.getenv('INITPLUGIN_VERSION')?:'1.0-SNAPSHOT'
+        println "Init plugin version ${initPluginVersion}"
+        classpath "org.gradle:initPlugin:${initPluginVersion}"
     }
 }
 
