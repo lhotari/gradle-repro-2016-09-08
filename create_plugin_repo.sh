@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "$( dirname "${BASH_SOURCE[0]}" )"
 cd customPlugin
 for i in plugin plugin2; do
     (
